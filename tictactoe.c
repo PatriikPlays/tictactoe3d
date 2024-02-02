@@ -130,12 +130,12 @@ int main(int argc, char* argv[]) {
     int winline = atoi(argv[2]);
 
     if (size < 2 || size > 512) {
-        printf("Size should be within [3;15], inclusive\n");
+        printf("Size should be within [2;512], inclusive\n");
         return 1;
     }
 
     if (winline < 2 || winline > 512) {
-        printf("Winline should be within [3;15], inclusive\n");
+        printf("Winline should be within [2;512], inclusive\n");
         return 1;
     }
 
