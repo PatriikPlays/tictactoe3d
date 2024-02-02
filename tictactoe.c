@@ -54,11 +54,11 @@ bool check_win(const unsigned char* grid, int size, int winline) {
     return false;
 }
 
-void draw(int x, int y, int z, const unsigned char* grid, int size, size_t grid_size, int player) {
+void draw(int x, int y, int z, const unsigned char* grid, int size, int player) {
     printf("\033[2J\033[H");
     printf("z:  %02d\n", z);
     printf("plr: %d\n", player);
-    
+
     for (int i = 0; i < size*2-1; i++) {
         printf("-");
     }
@@ -148,7 +148,7 @@ int main(int argc, char* argv[]) {
     unsigned char player = 0;
 
     while (1) {
-        draw(x, y, z, grid, size, pow(size, 3), player);
+        draw(x, y, z, grid, size, player);
 
         if (check_win(grid, size, winline)) {
             printf("\nPlayer %d won\n", (player + 1) % 2);
